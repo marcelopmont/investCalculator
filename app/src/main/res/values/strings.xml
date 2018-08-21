@@ -9,5 +9,10 @@
     <string name="home_percentage_cdi">Qual percentual do CDI do investimento? *</string>
     <string name="home_percentage_hint">100%</string>
     <string name="home_simulate_button">simular</string>
+    <string name="title_activity_result">ResultActivity</string>
+
+    <!-- Result -->
+    <string name="result_title_label">Resultado da simulação</string>
+    <string name="result_earnings_label">Rendimento total de</string>
 
 </resources>
