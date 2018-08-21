@@ -14,5 +14,17 @@
     <!-- Result -->
     <string name="result_title_label">Resultado da simulação</string>
     <string name="result_earnings_label">Rendimento total de</string>
+    <string name="result_value_applied_label">Valor aplicado inicialmente</string>
+    <string name="result_gross_value_label">Valor bruto do investimento</string>
+    <string name="result_income_value_label">Valor do rendimento</string>
+    <string name="result_IR_label">IR sobre o investimento</string>
+    <string name="result_net_value_label">Valor líquido do investimento</string>
+    <string name="result_redemption_date_label">Data de resgate</string>
+    <string name="result_consecutive_days_label">Dias corridos</string>
+    <string name="result_monthly_income_label">Rendimento mensal</string>
+    <string name="result_percentual_CDI_label">Percentual do CDI do investimento</string>
+    <string name="result_annual_profit_label">Rentabilidade anual</string>
+    <string name="result_period_profit_label">Rentabilidade no período</string>
+    <string name="result_simulate_again_button">Simular novamente</string>
 
 </resources>

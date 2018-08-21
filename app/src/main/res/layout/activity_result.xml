@@ -33,19 +33,19 @@
             app:layout_constraintTop_toBottomOf="@+id/resultTitleLabel" />
 
         <TextView
-            android:id="@+id/earningsLabel"
+            android:id="@+id/resultEarningsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/result_vertical_margin"
             android:text="@string/result_earnings_label"
-            app:layout_constraintEnd_toStartOf="@+id/earningsValue"
+            app:layout_constraintEnd_toStartOf="@+id/resultEarningsValue"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/resultValue" />
 
         <TextView
-            android:id="@+id/earningsValue"
+            android:id="@+id/resultEarningsValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/result_vertical_margin"
@@ -55,10 +55,268 @@
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/earningsLabel"
+            app:layout_constraintStart_toEndOf="@+id/resultEarningsLabel"
             app:layout_constraintTop_toBottomOf="@+id/resultValue" />
 
-        
+        <TextView
+            android:id="@+id/resultValueAppliedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin_large"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_value_applied_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultEarningsLabel"/>
+
+        <TextView
+            android:id="@+id/resultValueApplied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="R$ 1.000,00"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultValueAppliedLabel"/>
+
+        <TextView
+            android:id="@+id/resultGrossValueLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_gross_value_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultValueAppliedLabel"/>
+
+        <TextView
+            android:id="@+id/resultGrossValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="R$ 1.088,69"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultGrossValueLabel"/>
+
+        <TextView
+            android:id="@+id/resultIncomeValueLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_income_value_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultGrossValueLabel"/>
+
+        <TextView
+            android:id="@+id/resultIncomeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="R$ 88,69"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultIncomeValueLabel"/>
+
+        <TextView
+            android:id="@+id/resultIRLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_IR_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultIncomeValueLabel"/>
+
+        <TextView
+            android:id="@+id/resultIRValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="R$ 15,52(17,50%)"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultIRLabel"/>
+
+        <TextView
+            android:id="@+id/resultNetValueLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_net_value_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultIRLabel"/>
+
+        <TextView
+            android:id="@+id/resultNetValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="R$ 1.073,17"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultNetValueLabel"/>
+
+        <TextView
+            android:id="@+id/resultRedemptionDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin_large"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_redemption_date_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultNetValueLabel"/>
+
+        <TextView
+            android:id="@+id/resultRedemptionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="27/10/2018"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultRedemptionDateLabel"/>
+
+        <TextView
+            android:id="@+id/resultConsecutiveDaysLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_consecutive_days_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultRedemptionDateLabel"/>
+
+        <TextView
+            android:id="@+id/resultConsecutiveDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="365"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultConsecutiveDaysLabel"/>
+
+        <TextView
+            android:id="@+id/resultMonthlyIncomeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_monthly_income_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultConsecutiveDaysLabel"/>
+
+        <TextView
+            android:id="@+id/resultMonthlyIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="0,57%"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultMonthlyIncomeLabel"/>
+
+        <TextView
+            android:id="@+id/resultPercentualCDILabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_percentual_CDI_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultMonthlyIncomeLabel"/>
+
+        <TextView
+            android:id="@+id/resultPercentualCDI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="123%"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultPercentualCDILabel"/>
+
+        <TextView
+            android:id="@+id/resultAnnualProfitLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_annual_profit_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultPercentualCDILabel"/>
+
+        <TextView
+            android:id="@+id/resultAnnualProfit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="7,09%"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultAnnualProfitLabel"/>
+
+        <TextView
+            android:id="@+id/resultPeriodProfitLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:text="@string/result_period_profit_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultAnnualProfitLabel"/>
+
+        <TextView
+            android:id="@+id/resultPeriodProfit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:text="8,87%"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultPeriodProfitLabel"/>
+
+        <Button
+            android:id="@+id/resultSimulateAgainButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/result_vertical_margin_large"
+            android:layout_marginBottom="@dimen/result_vertical_margin_large"
+            android:layout_marginEnd="@dimen/result_horizontal_margin"
+            android:layout_marginLeft="@dimen/result_horizontal_margin"
+            android:layout_marginRight="@dimen/result_horizontal_margin"
+            android:layout_marginStart="@dimen/result_horizontal_margin"
+            android:background="@drawable/rounded_button"
+            android:text="@string/result_simulate_again_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultPeriodProfitLabel" />
 
 
     </android.support.constraint.ConstraintLayout>

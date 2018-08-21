@@ -7,8 +7,9 @@
     <dimen name="home_edit_text_size">30sp</dimen>
 
     <!-- Result -->
-    <dimen name="result_vertical_margin_large">25dp</dimen>
+    <dimen name="result_vertical_margin_large">30dp</dimen>
     <dimen name="result_vertical_margin">10dp</dimen>
+    <dimen name="result_horizontal_margin">16dp</dimen>
 
     <dimen name="result_value_text_size">40sp</dimen>
 
