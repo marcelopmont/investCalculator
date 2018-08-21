@@ -1,19 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".modules.MainActivity">
 
     <TextView
+        android:id="@+id/homeApplyLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/home_vertical_margin"
+        android:text="@string/home_how_much_apply"
+        app:layout_constraintBottom_toTopOf="@+id/homeApplyLabelInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/homeApplyLabelInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/home_horizontal_margin"
+        android:layout_marginLeft="@dimen/home_horizontal_margin"
+        android:layout_marginRight="@dimen/home_horizontal_margin"
+        android:layout_marginStart="@dimen/home_horizontal_margin"
+        android:gravity="center"
+        android:hint="@string/home_apply_hint"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/home_edit_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/homeDeadlineLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeApplyLabel"/>
+
+    <TextView
+        android:id="@+id/homeDeadlineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_vertical_margin"
+        android:text="@string/home_deadline"
+        app:layout_constraintBottom_toTopOf="@+id/homeDeadlineInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeApplyLabelInput" />
+
+
+    <EditText
+        android:id="@+id/homeDeadlineInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/home_horizontal_margin"
+        android:layout_marginLeft="@dimen/home_horizontal_margin"
+        android:layout_marginRight="@dimen/home_horizontal_margin"
+        android:layout_marginStart="@dimen/home_horizontal_margin"
+        android:gravity="center"
+        android:hint="@string/home_deadline_hint"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/home_edit_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/homePercentageLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeDeadlineLabel" />
+
+    <TextView
+        android:id="@+id/homePercentageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_vertical_margin"
+        android:text="@string/home_percentage_cdi"
+        app:layout_constraintBottom_toTopOf="@+id/homePercentageInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeDeadlineInput" />
+
+
+    <EditText
+        android:id="@+id/homePercentageInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/home_horizontal_margin"
+        android:layout_marginLeft="@dimen/home_horizontal_margin"
+        android:layout_marginRight="@dimen/home_horizontal_margin"
+        android:layout_marginStart="@dimen/home_horizontal_margin"
+        android:gravity="center"
+        android:hint="@string/home_percentage_hint"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/home_edit_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homePercentageLabel" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_vertical_margin"
+        android:layout_marginBottom="@dimen/home_vertical_margin"
+        android:layout_marginEnd="@dimen/home_horizontal_margin"
+        android:layout_marginLeft="@dimen/home_horizontal_margin"
+        android:layout_marginRight="@dimen/home_horizontal_margin"
+        android:layout_marginStart="@dimen/home_horizontal_margin"
+        android:background="@drawable/rounded_button"
+        android:text="@string/home_simulate_button"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homePercentageInput" />
+
 
 </android.support.constraint.ConstraintLayout>

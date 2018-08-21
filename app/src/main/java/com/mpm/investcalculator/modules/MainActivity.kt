@@ -1,7 +1,8 @@
-package com.mpm.investcalculator
+package com.mpm.investcalculator.modules
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.mpm.investcalculator.R
 
 class MainActivity : AppCompatActivity() {
 

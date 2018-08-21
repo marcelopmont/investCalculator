@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">InvestCalculator</string>
+
+    <!-- Home -->
+    <string name="home_how_much_apply">Quanto você gostaria de aplicar? *</string>
+    <string name="home_apply_hint">R$</string>
+    <string name="home_deadline">Qual a data de vencimento do investimento? *</string>
+    <string name="home_deadline_hint">dia/mês/ano</string>
+    <string name="home_percentage_cdi">Qual percentual do CDI do investimento? *</string>
+    <string name="home_percentage_hint">100%</string>
+    <string name="home_simulate_button">simular</string>
+
 </resources>
