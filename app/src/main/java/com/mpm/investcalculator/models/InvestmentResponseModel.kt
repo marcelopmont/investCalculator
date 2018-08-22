@@ -1,6 +1,10 @@
 package com.mpm.investcalculator.models
 
-class InvestmentRequestResponseModel(
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+class InvestmentResponseModel(
         val investmentParameter: InvestmentParameterModel,
         val grossAmount: Double,
         val taxesAmount: Double,
@@ -12,5 +16,4 @@ class InvestmentRequestResponseModel(
         val dailyGrossRateProfit: Double,
         val taxesRate: Double,
         val rateProfit: Double,
-        val annualNetRateProfit: Double
-)
+        val annualNetRateProfit: Double): Parcelable
