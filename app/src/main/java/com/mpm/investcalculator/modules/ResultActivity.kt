@@ -18,25 +18,32 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
+        setupButtons()
         populateData()
     }
 
-    fun populateData() {
+    private fun setupButtons() {
+        resultSimulateAgainButton.setOnClickListener {
+            finish()
+        }
+    }
+
+    private fun populateData() {
         val investmentResponseModel = intent.getParcelableExtra<InvestmentResponseModel>(RESPONSE_MODEL)
 
-        resultValue.text = investmentResponseModel.grossAmount.toString()
-        resultEarningsValue.text = investmentResponseModel.grossAmountProfit.toString()
-        resultValueApplied.text = investmentResponseModel.investmentParameter.investedAmount.toString()
-        resultGrossValue.text = investmentResponseModel.grossAmount.toString()
-        resultIncomeValue.text = investmentResponseModel.grossAmountProfit.toString()
-        resultIRValue.text = investmentResponseModel.taxesRate.toString()
-        resultNetValue.text = investmentResponseModel.netAmount.toString()
-        resultRedemptionDate.text = investmentResponseModel.investmentParameter.maturityDate
+        resultValue.text = investmentResponseModel.getFormattedGrossAmount()
+        resultEarningsValue.text = investmentResponseModel.getFormattedGrossAmountProfit()
+        resultValueApplied.text = investmentResponseModel.getFormattedInvestedAmount()
+        resultGrossValue.text = investmentResponseModel.getFormattedGrossAmount()
+        resultIncomeValue.text = investmentResponseModel.getFormattedGrossAmountProfit()
+        resultIRValue.text = investmentResponseModel.getFormattedTaxesRate()
+        resultNetValue.text = investmentResponseModel.getFormattedNetAmount()
+        resultRedemptionDate.text = investmentResponseModel.getFormattedMaturityDate()
         resultConsecutiveDays.text = investmentResponseModel.investmentParameter.maturityTotalDays.toString()
-        resultMonthlyIncome.text = investmentResponseModel.monthlyGrossRateProfit.toString()
-        resultPercentualCDI.text = investmentResponseModel.investmentParameter.rate.toString()
-        resultAnnualProfit.text = investmentResponseModel.annualGrossRateProfit.toString()
-        resultPeriodProfit.text = investmentResponseModel.rateProfit.toString()
+        resultMonthlyIncome.text = investmentResponseModel.getFormattedMonthlyGrossRateProfit()
+        resultPercentualCDI.text = investmentResponseModel.getFormattedRate()
+        resultAnnualProfit.text = investmentResponseModel.getFormattedAnnualGrossRateProfit()
+        resultPeriodProfit.text = investmentResponseModel.getFormattedRateProfit()
     }
 
 }

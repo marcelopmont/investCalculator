@@ -102,11 +102,8 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
 
                     enableSimulateButton(isFieldsCompleted())
                 }
-
             }
         })
-
-
     }
 
     private fun setupButton() {
@@ -140,9 +137,11 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     }
 
     private fun clearFields() {
+        setupInitialDate()
         homeApplyLabelInput.setText("")
         homePercentageInput.setText("")
         homeDeadlineInput.setText("")
+        enableSimulateButton(false)
     }
 
     private fun isFieldsCompleted(): Boolean {
