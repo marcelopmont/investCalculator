@@ -7,6 +7,7 @@ Android app to estimate earning from a CDI investment
 
 ## Tests
 
-The unit tests are localized in UnitTests class under com.mpm.investcalculator directory.
-This class tests every method from utils folder
+The unit tests are localized in UnitTests class under com.mpm.investcalculator directory.<br/>
+This class tests every method from utils folder<br/><br/>
+The espresso test (com.mpm.investcalculator > EspressoTest) covers the main flow of application
 
